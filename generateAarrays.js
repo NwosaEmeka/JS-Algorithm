@@ -8,10 +8,18 @@
 // > generateArrays(1)
 // > [[1]]
 
+// const generateArrays = () => {
+//   let ans = [];
+//   for (let i = 1; i < num; i++) {
+//     ans.push(Array(i).fill(0).map((_, index) => index+1))
+//   }
+//   return ans
+// }
+
 const generateArrays = () => {
   let ans = [];
   for (let i = 1; i < num; i++) {
-    ans.push(Array(i).fill(0).map((_, index) => index+1))
+    ans.push(Array.from({length: i}).map((_, index) => index+1))
   }
   return ans
 }
